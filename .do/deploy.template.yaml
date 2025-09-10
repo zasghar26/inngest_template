@@ -5,10 +5,11 @@ spec:
     - name: inngest-server
       image:
         registry_type: DOCR
-        repository: registry.digitalocean.com/htmxreg/inngest:latest
-        tag: latest 
+        repository: htmxreg/inngest   # ✅ no ":latest" here
+        tag: latest                   # ✅ set tag here (or use `digest:`)
       http_port: 8288
-      run_command: dev --url ${TARGET_URL}
+      run_command: >-
+        sh -lc 'inngest dev -u "${TARGET_URL}"'  # ✅ call the binary
       instance_size_slug: apps-d-2vcpu-4gb
       instance_count: 1
       routes:
@@ -16,5 +17,4 @@ spec:
       envs:
         - key: TARGET_URL
           scope: RUN_AND_BUILD_TIME
-          # Leave empty, users will fill this in on deploy
           value: ""
