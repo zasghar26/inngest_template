@@ -8,7 +8,7 @@ services:
       registry_type: DOCKER_HUB
       registry: docker.io
       repository: inngest/inngest
-      tag: latest              # or replace with digest: sha256:... (don’t include tag if you use digest)
+      digest: sha256:1983aee7a0e5a200f885ad8f2d27b23002fe9ef5da27b9bc2e9dcb46c7d0094c              # or replace with digest: sha256:... (don’t include tag if you use digest)
     envs:
       - key: TARGET_URL
         value: https://REPLACE-ME.example.com/api/inngest
