@@ -5,7 +5,7 @@ spec:
     - name: inngest-server
       image:
         registry_type: DOCR
-        repository: registry.digitalocean.com/htmxreg/inngest
+        repository: registry.digitalocean.com/htmxreg/inngest:latest
         tag: latest 
       http_port: 8288
       run_command: dev --url ${TARGET_URL}
