@@ -4,8 +4,8 @@ spec:
   services:
     - name: inngest-server
       image:
-        registry_type: DOCKER_HUB
-        repository: inngest/inngest
+        registry_type: DOCR
+        repository: registry.digitalocean.com/htmxreg/inngest
         tag: latest 
       http_port: 8288
       run_command: dev --url ${TARGET_URL}
