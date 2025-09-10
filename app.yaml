@@ -1,16 +1,14 @@
-# app.yaml
-# Use with: doctl apps create --spec app.yaml
 name: inngest-dev
 region: nyc
 services:
   - name: dev
     http_port: 8288
-    instance_size_slug: basic-xxs
+    instance_size_slug: apps-d-2vcpu-4gb
     image:
       registry_type: DOCKER_HUB
       registry: docker.io
       repository: inngest/inngest
-      tag: latest
+      tag: latest              # or replace with digest: sha256:... (don’t include tag if you use digest)
     envs:
       - key: TARGET_URL
         value: https://REPLACE-ME.example.com/api/inngest
