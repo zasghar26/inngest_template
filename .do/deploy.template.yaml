@@ -6,7 +6,7 @@ spec:
       image:
         registry_type: DOCKER_HUB
         repository: inngest/inngest
-        digest: sha256:1983aee7a0e5a200f885ad8f2d27b23002fe9ef5da27b9bc2e9dcb46c7d0094c
+        tag: latest 
       http_port: 8288
       run_command: dev --url ${TARGET_URL}
       instance_size_slug: apps-d-2vcpu-4gb
