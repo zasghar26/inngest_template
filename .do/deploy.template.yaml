@@ -6,7 +6,7 @@ spec:
       image:
         registry_type: DOCR
         repository: htmxreg/inngest   # ✅ no ":latest" here
-        tag: latest                   # ✅ set tag here (or use `digest:`)
+        digest: "registry.digitalocean.com/htmxreg/inngest@sha256:d7e061d560ee921f58fd3a8a456f9b4830f074e7a5f2dc1ba7eb759987f8b3ee"                   # ✅ set tag here (or use `digest:`)
       http_port: 8288
       run_command: >-
         sh -lc 'inngest dev -u "${TARGET_URL}"'  # ✅ call the binary
